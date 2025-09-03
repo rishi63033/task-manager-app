@@ -21,7 +21,7 @@ const authenticateFirebase = async (req, res, next) => {
   try {
     const decodedToken = await admin.auth().verifyIdToken(idToken);
     req.user = decodedToken; // now req.user.uid will exist
-    console.log("Decoded token UID:", req.user.uid); // <-- log AFTER assigning
+   
     next();
   } catch (err) {
     console.error("Firebase token verification error:", err);
