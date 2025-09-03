@@ -9,7 +9,7 @@ admin.initializeApp({
 
 const authenticateFirebase = async (req, res, next) => {
   const authHeader = req.headers.authorization;
-  console.log("Authorization header:", authHeader);
+
   
 
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
